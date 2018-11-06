@@ -1,0 +1,7 @@
+﻿Write a program that allows a user to sign-up and compile a list 
+of favorite movies. They should be able to add, remove, update, 
+and see all movies.
+
+Create a movie class and a customer class and write methods to add,
+update, remove, and see all movies.
+
