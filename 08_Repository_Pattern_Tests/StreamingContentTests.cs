@@ -53,7 +53,26 @@ namespace _08_Repository_Pattern_Tests
             //--Assert
             Assert.AreEqual(expected, actual);
             Assert.AreEqual(expectedTwo, actualTwo);
+        }
 
+        [TestMethod]
+        public void StreamingContentRepository_AddContentToList_ShouldReturnCorrectCount()
+        {
+            //--Arrange
+            StreamingContentRepository contentRepo = new StreamingContentRepository();
+            var list = contentRepo.GetContentList();
+            StreamingContent content = new StreamingContent();
+            StreamingContent contentTwo = new StreamingContent();
+
+
+            //--Act
+            contentRepo.AddContentToList(content);
+            list.Add(contentTwo);
+            var actual = contentRepo.GetContentList().Count;
+            var expected = 2;
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
